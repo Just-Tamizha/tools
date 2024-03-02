@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="DreFtOQeUS-EKq5Y80Zo_DN2tlMXktg4mQ75ysLSjlM" />
+
+    <!-- Title -->
+    <title>Blogger Text to Speech - PingTamizha</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://drive.google.com/uc?export=download&id=1hbVL5lJEVz3P1nIFWQCCkq3canWninDt"
+        type="image/x-icon">
+
+    <!-- Link Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        h1 {
+            font-size: xx-large;
+        }
+
+        h2 {
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Details -->
+    <div style="text-align: center;background-color: #ECF2F0;padding-top: 50px;padding-bottom: 50px;">
+        <h1>Blogger Text to Speech Generator</h1>
+        <p>Help: <a href="https://pingtamizha.com/" target="_blank">Contact Tamizha</a></p>
+    </div>
+
+    <!-- Ads -->
+    <div style="margin-top: 25px;margin-bottom: 25px;display: flex; justify-content: center;">
+        <script type="text/javascript">
+            atOptions = {
+                'key': 'b8662e4721a34db787537d57faa79bcd',
+                'format': 'iframe',
+                'height': 60,
+                'width': 468,
+                'params': {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/b8662e4721a34db787537d57faa79bcd/invoke.js"></scr' + 'ipt>');
+        </script>
+    </div>
+
+    <!-- Content Generator -->
+    <div style="text-align: center;padding-top: 40px;padding-bottom: 40px;background-color: #ECF2F0">
+        <h2>Enter Content Code ( HTML Code )</h2>
+        <p style="padding-bottom: 20px;"><a href="Text-To-Speech-blogger-example.html">Examples</a></p>
+        <textarea id="content" style="width: 90%;" rows="10"
+            placeholder="Enter your HTML content..."></textarea><br><br>
+        <button onclick="generate()" type="button" class="btn btn-success">Generate</button>
+    </div>
+
+    <!-- Results -->
+    <h2 style="text-align: center;padding-top: 20px;">Result</h2>
+    <p style="text-align: center;">Copy the Text, Once Generated</p>
+
+    <p id="result" style="background-color: #FDE7DE;width: 100%;overflow-wrap: break-word;"></p>
+
+    <!-- Ads -->
+    <div style="margin-top: 25px;margin-bottom: 25px;display: flex; justify-content: center;">
+        <script type="text/javascript">
+            atOptions = {
+                'key': 'b8662e4721a34db787537d57faa79bcd',
+                'format': 'iframe',
+                'height': 60,
+                'width': 468,
+                'params': {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/b8662e4721a34db787537d57faa79bcd/invoke.js"></scr' + 'ipt>');
+        </script>
+    </div>
+
+    <!-- Functions -->
+    <script>
+        function generate() {
+            var getContent = document.getElementById("content").value;
+            // var regenerate = `<button onclick="speak()">Play</button><br><br><div id="voiceContent">${getContent}</div><script>function htmlToText(html){var temp=document.createElement("div");temp.innerHTML=html;return temp.textContent||temp.innerText||"";}function speak(){var html=document.getElementById("voiceContent").innerHTML;var text=htmlToText(html);var utterance=new SpeechSynthesisUtterance();utterance.text=text;window.speechSynthesis.speak(utterance);}<\/script>`;
+            var regenerate = `<style>.button-3{appearance:none;background-color:#2ea44f;border:1px solid rgba(27,31,35,.15);border-radius:6px;box-shadow:rgba(27,31,35,.1) 0 1px 0;box-sizing:border-box;color:#fff;cursor:pointer;display:inline-block;font-family:-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";font-size:14px;font-weight:600;line-height:20px;padding:6px 16px;position:relative;text-align:center;text-decoration:none;user-select:none;-webkit-user-select:none;touch-action:manipulation;vertical-align:middle;white-space:nowrap}.button-3:focus:not(:focus-visible):not(.focus-visible){box-shadow:none;outline:0}.button-3:hover{background-color:#2c974b}.button-3:focus{box-shadow:rgba(46,164,79,.4) 0 0 0 3px;outline:0}.button-3:disabled{background-color:#94d3a2;border-color:rgba(27,31,35,.1);color:rgba(255,255,255,.8);cursor:default}.button-3:active{background-color:#298e46;box-shadow:rgba(20,70,32,.2) 0 1px 0 inset}.button-4{margin-left: 10px;appearance:none;background-color:#E62143;border:1px solid rgba(27,31,35,.15);border-radius:6px;box-shadow:rgba(27,31,35,.1) 0 1px 0;box-sizing:border-box;color:#fff;cursor:pointer;display:inline-block;font-family:-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";font-size:14px;font-weight:600;line-height:20px;padding:6px 16px;position:relative;text-align:center;text-decoration:none;user-select:none;-webkit-user-select:none;touch-action:manipulation;vertical-align:middle;white-space:nowrap}.button-4:focus:not(:focus-visible):not(.focus-visible){box-shadow:none;outline:0}.button-4:hover{background-color:#E62143}.button-4:focus{box-shadow:rgba(46,164,79,.4) 0 0 0 3px;outline:0}.button-4:disabled{background-color:#E62143;border-color:rgba(27,31,35,.1);color:rgba(255,255,255,.8);cursor:default}.button-4:active{background-color:#E62143;box-shadow:rgba(20,70,32,.2) 0 1px 0 inset}.button-5{margin-left: 10px;appearance:none;background-color:#5E5DF0;border:1px solid rgba(27,31,35,.15);border-radius:6px;box-shadow:rgba(27,31,35,.1) 0 1px 0;box-sizing:border-box;color:#fff;cursor:pointer;display:inline-block;font-family:-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";font-size:14px;font-weight:600;line-height:20px;padding:6px 16px;position:relative;text-align:center;text-decoration:none;user-select:none;-webkit-user-select:none;touch-action:manipulation;vertical-align:middle;white-space:nowrap}.button-5:focus:not(:focus-visible):not(.focus-visible){box-shadow:none;outline:0}.button-5:hover{background-color:#5E5DF0}.button-5:focus{box-shadow:rgba(46,164,79,.4) 0 0 0 3px;outline:0}.button-5:disabled{background-color:#5E5DF0;border-color:rgba(27,31,35,.1);color:rgba(255,255,255,.8);cursor:default}.button-5:active{background-color:#5E5DF0;box-shadow:rgba(20,70,32,.2) 0 1px 0 inset}</style><button onclick="speak()" class="button-3">Play</button><button onclick="togglePauseResume()" class="button-5">Pause/Resume</button><button onclick="stop()" class="button-4">Stop</button><br><br><div id="voiceContent">${getContent}</div><script>var utterance = new SpeechSynthesisUtterance();var isPaused = false;function htmlToText(html) {var temp = document.createElement("div");temp.innerHTML = html;return temp.textContent || temp.innerText || "";}function speak() {var html = document.getElementById("voiceContent").innerHTML;var text = htmlToText(html);utterance.text = text;window.speechSynthesis.speak(utterance);}function togglePauseResume() {if (isPaused) {window.speechSynthesis.resume();isPaused = false;} else {window.speechSynthesis.pause();isPaused = true;}}function stop() {window.speechSynthesis.cancel();isPaused = false;}<\/script>`
+            document.getElementById('result').innerText = regenerate
+        }
+    </script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

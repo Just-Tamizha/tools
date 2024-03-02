@@ -1,0 +1,17 @@
+/* Link Goolge Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+#header {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    background-color: azure
+}
