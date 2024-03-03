@@ -5,15 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="DreFtOQeUS-EKq5Y80Zo_DN2tlMXktg4mQ75ysLSjlM" />
-
     <!-- Title -->
     <title>Blogger Text to Speech - PingTamizha</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="https://drive.google.com/uc?export=download&id=1hbVL5lJEVz3P1nIFWQCCkq3canWninDt"
-        type="image/x-icon">
+    <link rel="shortcut icon" href="../TamizhaCircle-1.png" type="image/x-icon">
 
     <!-- Link Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +24,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif !important;
+            background-color: #F0FFFF;
         }
 
         h1 {
@@ -41,63 +38,44 @@
 </head>
 
 <body>
+
     <!-- Top Details -->
-    <div style="text-align: center;background-color: #ECF2F0;padding-top: 50px;padding-bottom: 50px;">
+    <div style="text-align: center;padding-top: 50px;padding-bottom: 50px;">
         <h1>Blogger Text to Speech Generator</h1>
         <p>Help: <a href="https://pingtamizha.com/" target="_blank">Contact Tamizha</a></p>
     </div>
 
-    <!-- Ads -->
-    <div style="margin-top: 25px;margin-bottom: 25px;display: flex; justify-content: center;">
-        <script type="text/javascript">
-            atOptions = {
-                'key': 'b8662e4721a34db787537d57faa79bcd',
-                'format': 'iframe',
-                'height': 60,
-                'width': 468,
-                'params': {}
-            };
-            document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/b8662e4721a34db787537d57faa79bcd/invoke.js"></scr' + 'ipt>');
-        </script>
-    </div>
-
     <!-- Content Generator -->
-    <div style="text-align: center;padding-top: 40px;padding-bottom: 40px;background-color: #ECF2F0">
+    <div style="text-align: center;padding-bottom: 40px;">
         <h2>Enter Content Code ( HTML Code )</h2>
         <p style="padding-bottom: 20px;"><a href="Text-To-Speech-blogger-example.html">Examples</a></p>
         <textarea id="content" style="width: 90%;" rows="10"
             placeholder="Enter your HTML content..."></textarea><br><br>
-        <button onclick="generate()" type="button" class="btn btn-success">Generate</button>
+        <button onclick="generate()" type="button" class="btn btn-success" id="generate">Generate</button>
     </div>
 
-    <!-- Results -->
-    <h2 style="text-align: center;padding-top: 20px;">Result</h2>
-    <p style="text-align: center;">Copy the Text, Once Generated</p>
-
-    <p id="result" style="background-color: #FDE7DE;width: 100%;overflow-wrap: break-word;"></p>
-
-    <!-- Ads -->
-    <div style="margin-top: 25px;margin-bottom: 25px;display: flex; justify-content: center;">
-        <script type="text/javascript">
-            atOptions = {
-                'key': 'b8662e4721a34db787537d57faa79bcd',
-                'format': 'iframe',
-                'height': 60,
-                'width': 468,
-                'params': {}
-            };
-            document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/b8662e4721a34db787537d57faa79bcd/invoke.js"></scr' + 'ipt>');
-        </script>
-    </div>
-
-    <!-- Functions -->
     <script>
         function generate() {
             var getContent = document.getElementById("content").value;
-            // var regenerate = `<button onclick="speak()">Play</button><br><br><div id="voiceContent">${getContent}</div><script>function htmlToText(html){var temp=document.createElement("div");temp.innerHTML=html;return temp.textContent||temp.innerText||"";}function speak(){var html=document.getElementById("voiceContent").innerHTML;var text=htmlToText(html);var utterance=new SpeechSynthesisUtterance();utterance.text=text;window.speechSynthesis.speak(utterance);}<\/script>`;
-            var regenerate = `<style>.button-3{appearance:none;background-color:#2ea44f;border:1px solid rgba(27,31,35,.15);border-radius:6px;box-shadow:rgba(27,31,35,.1) 0 1px 0;box-sizing:border-box;color:#fff;cursor:pointer;display:inline-block;font-family:-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";font-size:14px;font-weight:600;line-height:20px;padding:6px 16px;position:relative;text-align:center;text-decoration:none;user-select:none;-webkit-user-select:none;touch-action:manipulation;vertical-align:middle;white-space:nowrap}.button-3:focus:not(:focus-visible):not(.focus-visible){box-shadow:none;outline:0}.button-3:hover{background-color:#2c974b}.button-3:focus{box-shadow:rgba(46,164,79,.4) 0 0 0 3px;outline:0}.button-3:disabled{background-color:#94d3a2;border-color:rgba(27,31,35,.1);color:rgba(255,255,255,.8);cursor:default}.button-3:active{background-color:#298e46;box-shadow:rgba(20,70,32,.2) 0 1px 0 inset}.button-4{margin-left: 10px;appearance:none;background-color:#E62143;border:1px solid rgba(27,31,35,.15);border-radius:6px;box-shadow:rgba(27,31,35,.1) 0 1px 0;box-sizing:border-box;color:#fff;cursor:pointer;display:inline-block;font-family:-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";font-size:14px;font-weight:600;line-height:20px;padding:6px 16px;position:relative;text-align:center;text-decoration:none;user-select:none;-webkit-user-select:none;touch-action:manipulation;vertical-align:middle;white-space:nowrap}.button-4:focus:not(:focus-visible):not(.focus-visible){box-shadow:none;outline:0}.button-4:hover{background-color:#E62143}.button-4:focus{box-shadow:rgba(46,164,79,.4) 0 0 0 3px;outline:0}.button-4:disabled{background-color:#E62143;border-color:rgba(27,31,35,.1);color:rgba(255,255,255,.8);cursor:default}.button-4:active{background-color:#E62143;box-shadow:rgba(20,70,32,.2) 0 1px 0 inset}.button-5{margin-left: 10px;appearance:none;background-color:#5E5DF0;border:1px solid rgba(27,31,35,.15);border-radius:6px;box-shadow:rgba(27,31,35,.1) 0 1px 0;box-sizing:border-box;color:#fff;cursor:pointer;display:inline-block;font-family:-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";font-size:14px;font-weight:600;line-height:20px;padding:6px 16px;position:relative;text-align:center;text-decoration:none;user-select:none;-webkit-user-select:none;touch-action:manipulation;vertical-align:middle;white-space:nowrap}.button-5:focus:not(:focus-visible):not(.focus-visible){box-shadow:none;outline:0}.button-5:hover{background-color:#5E5DF0}.button-5:focus{box-shadow:rgba(46,164,79,.4) 0 0 0 3px;outline:0}.button-5:disabled{background-color:#5E5DF0;border-color:rgba(27,31,35,.1);color:rgba(255,255,255,.8);cursor:default}.button-5:active{background-color:#5E5DF0;box-shadow:rgba(20,70,32,.2) 0 1px 0 inset}</style><button onclick="speak()" class="button-3">Play</button><button onclick="togglePauseResume()" class="button-5">Pause/Resume</button><button onclick="stop()" class="button-4">Stop</button><br><br><div id="voiceContent">${getContent}</div><script>var utterance = new SpeechSynthesisUtterance();var isPaused = false;function htmlToText(html) {var temp = document.createElement("div");temp.innerHTML = html;return temp.textContent || temp.innerText || "";}function speak() {var html = document.getElementById("voiceContent").innerHTML;var text = htmlToText(html);utterance.text = text;window.speechSynthesis.speak(utterance);}function togglePauseResume() {if (isPaused) {window.speechSynthesis.resume();isPaused = false;} else {window.speechSynthesis.pause();isPaused = true;}}function stop() {window.speechSynthesis.cancel();isPaused = false;}<\/script>`
-            document.getElementById('result').innerText = regenerate
+            var regenerate = `<!-- Voice script START --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"><style>#pausebtn,#playbtn,#stopbtn{font-family:-apple-system,system-ui,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';font-weight:600;font-size:14px}#stopbtn{margin-left: 10px;}</style><div style="margin-bottom:20px"><button type="button" onclick="speak()" id="playbtn" class="btn btn-success" style="display:inline-block"><i class="fa-solid fa-play fa-lg" style="padding-right:8px"></i>LISTEN TO PLAY</button><button onclick="togglePauseResume()" id="pausebtn" class="btn btn-warning shadow-none" style="display:none"><i class="fa-solid fa-stop fa-xl" style="padding-right:8px"></i>PAUSE</button><button onclick="stop()" class="btn btn-danger" id="stopbtn" style="display:none;"><i class="fa-solid fa-ban" style="padding-right:8px"></i>STOP</button></div><script>var utterance=new SpeechSynthesisUtterance,isPaused=!1;function htmlToText(e){var n=document.createElement("div");return n.innerHTML=e,n.textContent||n.innerText||""}function speak(){document.getElementById("playbtn").style.display="none",document.getElementById("pausebtn").style.display="inline-block",document.getElementById("stopbtn").style.display="inline-block";var e=htmlToText(document.getElementById("voiceContent").innerHTML);utterance.text=e,window.speechSynthesis.speak(utterance)}function togglePauseResume(){isPaused=isPaused?(document.getElementById("pausebtn").innerHTML='<i class="fa-solid fa-pause fa-xl" style="padding-right:8px"></i>PAUSE',document.getElementById("pausebtn").style.backgroundColor="#5E5DF0",window.speechSynthesis.resume(),!1):(document.getElementById("pausebtn").innerHTML='<i class="fa-solid fa-pause fa-xl" style="padding-right:8px"></i>RESUME',document.getElementById("pausebtn").style.backgroundColor="#FBBC04",window.speechSynthesis.pause(),!0)}function stop(){document.getElementById("playbtn").style.display="inline-block",document.getElementById("pausebtn").style.display="none",document.getElementById("stopbtn").style.display="none",window.speechSynthesis.cancel(),isPaused=!1}window.onbeforeunload=function(){stop()}<\/script><hr><!-- Voice script END --><div id="voiceContent">${getContent}</div>`;
+            if (!copyToClipboard(regenerate)) { alert('Unable to copy!') }
+            document.getElementById('generate').innerText = "Copied !"
+            document.getElementById('generate').className = "btn btn-primary";
+            setTimeout(() => {
+                document.getElementById('generate').innerText = "Generate"
+                document.getElementById('generate').className = "btn btn-success";
+            }, 1000);
         }
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (error) {
+                console.warn("Copy to clipboard failed.", error);
+                return false;
+            }
+        }
+
     </script>
 
     <!-- Bootstrap -->
