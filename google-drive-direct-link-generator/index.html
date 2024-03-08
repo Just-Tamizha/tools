@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>Google Drive Direct Link Generator - PingTamizha</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../TamizhaCircle-1.png" type="image/x-icon">
+
+    <!-- Link Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif !important;
+            background-color: #F0FFFF;
+        }
+
+        h1 {
+            font-size: xx-large;
+        }
+
+        h2 {
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Details -->
+    <div style="text-align: center;padding-top: 50px;padding-bottom: 50px;">
+        <h1>Google Drive Direct Link Generator</h1>
+        <p>Help: <a href="https://pingtamizha.com/" target="_blank">Contact Tamizha</a></p>
+    </div>
+
+
+    <!-- Content -->
+    <div style="text-align: center;padding-bottom: 40px;">
+        <h5 style="padding-bottom: 20px;">Enter your Google Drive URL</h5>
+        <input type="text" placeholder="Enter your URL..." id="getURL" style="width: 25%;height: 40px;">
+    </div>
+
+    <div style="text-align: center;">
+        <button onclick="generate()" type="button" class="btn btn-success" id="generate">Create Link</button>
+        <button onclick="generate()" type="button" class="btn btn-success" id="generate">Direct Download</button>
+    </div>
+
+    <script>
+
+        function generate() {
+            const sharingUrl = document.getElementById("getURL").value;
+            const directLink = generateDirectLinkFromUrl(sharingUrl);
+            if (directLink) {
+                if (!copyToClipboard(directLink)) { alert('Unable to copy!') }
+                document.getElementById('generate').innerText = "Copied !"
+                document.getElementById('generate').className = "btn btn-primary";
+                setTimeout(() => {
+                    document.getElementById('generate').innerText = "Generate"
+                    document.getElementById('generate').className = "btn btn-success";
+                }, 1000);
+
+            } else {
+                alert("URL invalid")
+            }
+        }
+        function generateDirectLinkFromUrl(url) {
+            const fileIdMatch = url.match(/\/d\/([^/]+)/);
+            if (!fileIdMatch) {
+                return null;
+            }
+            const fileId = fileIdMatch[1];
+            const directLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
+            return directLink;
+        }
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (error) {
+                console.warn("Copy to clipboard failed.", error);
+                return false;
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
