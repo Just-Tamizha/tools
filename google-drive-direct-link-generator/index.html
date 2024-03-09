@@ -49,16 +49,16 @@
     <!-- Content -->
     <div style="text-align: center;padding-bottom: 40px;">
         <h5 style="padding-bottom: 20px;">Enter your Google Drive URL</h5>
+        <p></p>
         <input type="text" placeholder="Enter your URL..." id="getURL" style="width: 25%;height: 40px;">
     </div>
 
     <div style="text-align: center;">
-        <button onclick="generate()" type="button" class="btn btn-success" id="generate">Create Link</button>
-        <button onclick="generate()" type="button" class="btn btn-success" id="generate">Direct Download</button>
+        <button onclick="generate()" type="button" class="btn btn-success" id="generate" style="margin-right: 10px;">Create Link</button>
+        <button onclick="reDirect()" type="button" class="btn btn-dark" id="generate">Direct Download</button>
     </div>
 
     <script>
-
         function generate() {
             const sharingUrl = document.getElementById("getURL").value;
             const directLink = generateDirectLinkFromUrl(sharingUrl);
@@ -71,6 +71,15 @@
                     document.getElementById('generate').className = "btn btn-success";
                 }, 1000);
 
+            } else {
+                alert("URL invalid")
+            }
+        }
+        function reDirect() {
+            const sharingUrl = document.getElementById("getURL").value;
+            const directLink = generateDirectLinkFromUrl(sharingUrl);
+            if (directLink) {
+                window.open(directLink);
             } else {
                 alert("URL invalid")
             }
