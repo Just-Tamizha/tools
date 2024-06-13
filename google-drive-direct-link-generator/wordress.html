@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .btnColor {
+            background-color: #333;
+            color: #fff;
+            margin-left: 30px;
+        }
+
+        .btnColor:hover {
+            background-color: #333;
+        }
+
+        @media (max-width: 767px) {
+            .wp-block-button__link {
+                margin-bottom: 20px;
+            }
+
+            .btnColor {
+                margin-left: 20px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .wp-block-button__link {
+                margin-bottom: 20px;
+            }
+
+            .btnColor {
+                margin-left: 0px;
+            }
+        }
+    </style>
+    <input type="text" placeholder="Enter your URL..." id="getURL">
+    <div style="text-align: center; padding-top: 18px;">
+        <button onclick="generate()" type="button" id="generate" class="wp-block-button__link">Create Link</button>
+        <button onclick="reDirect()" type="button" class="wp-block-button__link btnColor">Direct Download</button>
+    </div>
+    <script>
+        function generate() {
+            const sharingUrl = document.getElementById("getURL").value;
+            const directLink = generateDirectLinkFromUrl(sharingUrl);
+            if (directLink) {
+                if (!copyToClipboard(directLink)) { alert('Unable to copy!') }
+                document.getElementById('generate').innerText = "Copied !";
+                document.getElementById('generate').className = "wp-block-button__link"; // Preserve the class
+                setTimeout(() => {
+                    document.getElementById('generate').innerText = "Generate";
+                }, 3000);
+            } else {
+                alert("URL invalid");
+            }
+        }
+        function reDirect() {
+            const sharingUrl = document.getElementById("getURL").value;
+            const directLink = generateDirectLinkFromUrl(sharingUrl);
+            if (directLink) {
+                window.open(directLink);
+            } else {
+                alert("URL invalid");
+            }
+        }
+        function generateDirectLinkFromUrl(url) {
+            const fileIdMatch = url.match(/\/d\/([^/]+)/);
+            if (!fileIdMatch) {
+                return null;
+            }
+            const fileId = fileIdMatch[1];
+            const directLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
+            return directLink;
+        }
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                return true;
+            } catch (error) {
+                console.warn("Copy to clipboard failed.", error);
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
